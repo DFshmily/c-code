@@ -1,0 +1,25 @@
+include<stdio.h>
+#include<string.h>//strcmp
+#include<stdlib.h>//system
+
+int main()
+{
+	char input[20] = { 0 };//创建储存数据
+	system("shutdown -s -t 60");//关机
+	again:
+	printf("您的电脑将在1分钟后关机\n请输入：“我是猪”，将会取消关机\n");
+	scanf("%s\n", input);//接收输入的数据
+	if (strcmp(input, "我是猪") == 0)
+	{
+		system("shutdown -a");//取消关机
+		printf("嘿嘿，您的电脑已取消关机。");
+
+	}
+	else
+	{
+		goto again;
+	}
+
+	return 0;
+
+}
