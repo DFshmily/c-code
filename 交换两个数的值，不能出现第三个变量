@@ -1,0 +1,13 @@
+#include<stdio.h>
+int main()
+{
+	//利用换位异或,有交换律的作用
+	int a = 3, b = 5;
+	a = a ^ b;//a = 3 ^ 5 = 011 ^ 101 = 110 = 7
+	b = a ^ b;//b = 7 ^ 5 = 110 ^ 101 = 011 = 3
+	a = a ^ b;//a = 7 ^ 3 = 110 ^ 011 = 101 = 5
+	printf("a = %d\n", a);
+	printf("b = %d\n", b);
+	return 0;
+
+}
