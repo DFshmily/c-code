@@ -1,0 +1,16 @@
+#include<stdio.h>
+
+
+//用三目运算符来比较输入的两个数的大小
+int main()
+{
+	int a = 0;
+	int b = 0;
+	int max;
+	printf("请输入两个整数：\n");
+	scanf("%d%d*c\n", &a, &b);
+	max = (a > b ? a : b);
+	printf("较大的是：%d\n", max);
+
+	return 0;
+}
