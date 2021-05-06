@@ -1,0 +1,35 @@
+//编写代码：演示多个字符从两端移动，向中间汇聚。
+#include<stdio.h>
+#include <string.h>//strlen
+#include<windows.h>//Sleep
+#include<stdlib.h>//system
+int main()
+{
+	//打印：ZXR! IHAAAAAA!!!
+	//---------------
+	//Z-------------！
+	//ZX-----------!!
+	//ZXR---------!!!
+	//ZXR!-------A!!!
+	//......
+	//ZXR! IHAAAAAA!!!
+
+	char arr1[] = "ZXR! IHAAAAAA!!!";
+	char arr2[] = "----------------";
+	int left = 0;//左下标
+	//int right = sizeof(arr1) / sizeof(arr1[0]) - 2;//求字符串的位数-2是右下标(有'\n'，所以减2)
+	int right = strlen(arr1) - 1;
+
+	while (left <= right)
+	{
+		arr2[left] = arr1[left];
+		arr2[right] = arr1[right];
+		printf("%s\n", arr2);
+		Sleep(1000);//延迟一秒
+		system("cls");//执行系统命令的一个函数，清空屏幕
+		left++;
+		right--;
+	}
+	printf("%s\n", arr2);
+	return 0;
+}
