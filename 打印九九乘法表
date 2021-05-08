@@ -1,0 +1,17 @@
+#include<stdio.h>
+//打印九九乘法表
+int main()
+{
+	int i, j;
+	//行
+	for (i = 1;i <= 9;i++)
+	{
+		for (j = 1;j <= i;j++)
+		{
+			//列
+			printf("%d*%d=%-2d ", i, j, i * j);//-代表向左边，2代表留空对齐
+		}
+		printf("\n");
+	}
+	return 0;
+}
