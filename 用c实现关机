@@ -2,6 +2,8 @@
 #include<string.h>//strcmp
 #include<stdlib.h>//system
 
+
+//第一种
 int main()
 {
 	char input[20] = { 0 };//创建储存数据
@@ -9,7 +11,7 @@ int main()
 
 again:
 	printf("您的电脑将在1分钟后关机\n请输入：“我是猪”，将会取消关机\n");
-	scanf("%s*c\n", input);//接收输入的数据,*c用来消除scanf在输入缓冲区留下残留的回车等字符
+	scanf("%s", input);
 	if (strcmp(input, "我是猪") == 0)
 	{
 		system("shutdown -a");//取消关机
@@ -25,3 +27,28 @@ again:
 	return 0;
 
 }
+
+
+//第二种
+
+//int main()
+//{
+//	char input[20] = { 0 };//创建储存数据
+//	system("shutdown -s -t 60");//关机
+//
+//	while (1)
+//	{
+//		printf("您的电脑将在1分钟后关机\n请输入：“我是猪”，将会取消关机\n");
+//	    scanf("%s", input);
+//	    if (strcmp(input, "我是猪") == 0)
+//	     {
+//		    system("shutdown -a");//取消关机
+//		    printf("嘿嘿，您的电脑已取消关机。");
+//		    break;
+//		}
+//
+//	}
+//	
+//	return 0;
+//
+//}
