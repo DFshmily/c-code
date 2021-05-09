@@ -1,0 +1,11 @@
+//链式访问
+#include<stdio.h>
+int main()
+{
+	printf("%d", printf("%d", printf("%d", 43)));
+	//最里面的是printf("%d", 43)打印43，printf的返回值是写入的字符总数，
+	//所以第二次的printf是printf("%d", 2)，然后最开始的printf就是printf("%d", 1)；
+	//所以打印4321
+	return 0;										
+
+}
