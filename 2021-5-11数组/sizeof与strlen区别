@@ -7,7 +7,19 @@ int main()
 {
 	int arr1[10] = { 1,2,3 };//不完全初始化，剩下的元素默认初始化为0
 	char arr2[] = "abc";
+
+
+	char arr3[] = "abcd";//arr3  a b c d \0
+	char arr4[] = { 'a','b','c','d' };//arr4  a b c d
 	printf("%d\n", sizeof(arr2));//sizeof计算数组arr2所占空间的大小包括“\0”
 	printf("%d\n", strlen(arr2));//strlen求字符串的长度不包括“\0”
+
+
+
+
+	printf("%d\n", sizeof(arr3));//5
+	printf("%d\n", sizeof(arr4));//4
+	printf("%d\n", strlen(arr3));//4
+	printf("%d\n", strlen(arr4));//因为没有\0，所以这个得的是随机值
 	return 0;
 }
